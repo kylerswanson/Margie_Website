@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margie Swanson - Parties & Art</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        header { text-align: center; }
+        section { margin: 20px 0; }
+        .gallery { display: flex; gap: 10px; }
+        .gallery img { width: 200px; height: auto; }
+        form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+        input, textarea, select { padding: 8px; }
+        button { padding: 10px; background: #007BFF; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jane Doe</h1>
+        <p>Line Dancing, Face Painting, and Fine Art for [Your City]!</p>
+    </header>
+
+    <section>
+        <h2>Line Dancing</h2>
+        <p>Lively line dancing for parties and gatherings—bringing fun to your event!</p>
+    </section>
+
+    <section>
+        <h2>Face Painting</h2>
+        <p>Kid-safe, hypoallergenic paints for all ages. Perfect for birthdays and festivals.</p>
+        <div class="gallery">
+            <img src="facepaint1.jpg" alt="Face painting example 1">
+            <img src="facepaint2.jpg" alt="Face painting example 2">
+            <img src="facepaint3.jpg" alt="Face painting example 3">
+        </div>
+    </section>
+
+    <section>
+        <h2>Fine Art</h2>
+        <p>Explore my mixed media creations—available now!</p>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <select name="service" required>
+                <option value="">Select a Service</option>
+                <option value="line-dancing">Line Dancing</option>
+                <option value="face-painting">Face Painting</option>
+                <option value="fine-art">Fine Art</option>
+            </select>
+            <input type="date" name="event-date" placeholder="Event Date (Optional)">
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Serving [Your City/Region] and surrounding areas.</p>
+    </footer>
+</body>
+</html>
