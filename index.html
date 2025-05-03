@@ -4,21 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margie Swanson - Parties & Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
-        header { text-align: center; }
-        section { margin: 20px 0; }
-        .gallery { display: flex; gap: 10px; }
-        .gallery img { width: 200px; height: auto; }
-        form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
-        input, textarea, select { padding: 8px; }
-        button { padding: 10px; background: #007BFF; color: white; border: none; cursor: pointer; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f4e4e1;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #e8d5d1;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #5b3f47;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #7a5c61;
+            margin: 10px 0 0;
+        }
+        section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #5b3f47;
+            font-size: 1.8em;
+            border-bottom: 1px solid #e8d5d1;
+            padding-bottom: 5px;
+        }
+        section p {
+            font-size: 1em;
+            color: #555;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #e8d5d1;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: 'Open Sans', sans-serif;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            padding: 12px;
+            background-color: #d4a5a5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c68b8b;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4e4e1;
+            color: #7a5c61;
+            font-size: 0.9em;
+            border-top: 2px solid #e8d5d1;
+            margin-top: 30px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            section h2 {
+                font-size: 1.5em;
+            }
+            form {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Margie Swanson</h1>
-        <p>Line Dancing, Face Painting, Art Parties and Fine Art for special event in Northern Colorado!</p>
+        <p>Line Dancing, Face Painting, Art Parties, and Fine Art for Special Events in Northern Colorado!</p>
     </header>
 
     <section>
@@ -29,12 +120,8 @@
     <section>
         <h2>Face Painting</h2>
         <p>Kid-safe, hypoallergenic paints for all ages. Perfect for birthdays and festivals.</p>
-        <div class="gallery">
-            <img src="facepaint1.jpg" alt="Face painting example 1">
-            <img src="facepaint2.jpg" alt="Face painting example 2">
-            <img src="facepaint3.jpg" alt="Face painting example 3">
-        </div>
     </section>
+
     <section>
         <h2>Painting Parties</h2>
         <p>Host a sip and paint party for adults or kids! I provide fun, guided painting sessions with all supplies included.</p>
@@ -51,12 +138,12 @@
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <select name="service" required>
-    		<option value="">Select a Service</option>
-  		<option value="line-dancing">Line Dancing</option>
-  		<option value="face-painting">Face Painting</option>
-  		<option value="painting-parties">Painting Parties</option>
- 		<option value="fine-art">Fine Art</option>
-	    </select>
+                <option value="">Select a Service</option>
+                <option value="line-dancing">Line Dancing</option>
+                <option value="face-painting">Face Painting</option>
+                <option value="painting-parties">Painting Parties</option>
+                <option value="fine-art">Fine Art</option>
+            </select>
             <input type="date" name="event-date" placeholder="Event Date (Optional)">
             <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit">Send</button>
@@ -64,7 +151,7 @@
     </section>
 
     <footer>
-        <p>Serving Johnstown, Loveland, Greeley and surrounding areas.</p>
+        <p>Serving Johnstown, Loveland, Greeley, and surrounding areas.</p>
     </footer>
 </body>
 </html>
