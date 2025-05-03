@@ -68,6 +68,24 @@
         textarea {
             resize: vertical;
         }
+        /* Custom styling for date input placeholder */
+        input[type="date"] {
+            color: #999;
+            position: relative;
+        }
+        input[type="date"]::before {
+            content: attr(data-placeholder);
+            color: #999;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        input[type="date"]:focus::before,
+        input[type="date"]:valid::before {
+            content: none;
+        }
         button {
             padding: 12px;
             background-color: #d4a5a5;
@@ -144,7 +162,7 @@
                 <option value="painting-parties">Painting Parties</option>
                 <option value="fine-art">Fine Art</option>
             </select>
-            <input type="date" name="event-date" placeholder="Event Date (Optional)">
+            <input type="date" name="event-date" data-placeholder="Event Date (Optional)">
             <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit">Send</button>
         </form>
